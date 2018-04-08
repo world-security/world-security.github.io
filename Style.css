@@ -1,0 +1,182 @@
+/* Comments */
+body {
+	background-image: url(img/5d68fe_ec22bb3f9c314dffb9b94c364b75951d.jpg); /* ссылка на фоновое изображение */
+    background-size: 1700px 675px; /* корректировка фонового изображения */
+}
+
+/* название */
+.text1 {
+    color: aliceblue;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    font-family: monospace;
+    font-size: 60px;
+}
+
+
+/* Описание вкладок */
+
+body {margin: 0;padding: 0;font-family: monospace;}
+
+ul {
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;    
+}
+ul li {
+  list-style: ;
+}
+ul li a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #727272; /* цвет вторичных ссылок - не активных */
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: none;
+  transition: 0.5s;
+  overflow: hidden;
+}
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #9d0303; /* цвет анимированного фона */
+  transition: .5s;
+}
+ul li a:hover {
+  color: #ffffff; /* цвет активной ссылки */
+}
+ul li a:hover::before {
+  animation: animate 0.25s linear forwards; /* скорость анимации */
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+/* подсветка активного пункта меню */
+
+.current a {
+    color: aliceblue;
+}
+/* горизонтальные вкладки в главном меню */
+h3 {
+  font-size: 25px;
+  line-height: 0.8em;
+  color: rgba(255, 255, 255, 0.58);} 
+
+.tabs {
+      display: block;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 0;
+      overflow: hidden;
+    position: absolute;
+    left: 30%;
+    top: 0%;
+}
+  .tabs [class^="tab"] label,
+  .tabs [class*=" tab"] label {
+    color: #ffffff; /* цвет наименования вкладок */
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding: 2rem 0;
+    font-size: 23px;    
+    text-align: center; }
+  .tabs [class^="tab"] [type="radio"],
+  .tabs [class*=" tab"] [type="radio"] {
+    border-bottom: 2px solid rgba(100, 0, 0, 0.67);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+    .tabs [class*="tab"] [type="radio"]:hover,
+    .tabs [class*="tab"] [type="radio"]:focus {
+      border-bottom: 2px solid rgb(190, 4, 4); }
+    .tabs [class^="tab"] [type="radio"]:checked,
+    .tabs [class*=" tab"] [type="radio"]:checked {
+      border-bottom: 3px solid rgb(100, 0, 0); }
+    .tabs [class^="tab"] [type="radio"]:checked + div,
+    .tabs [class*=" tab"] [type="radio"]:checked + div {
+      opacity: 1; } /* прозрачность открытой вкладки */
+    .tabs [class^="tab"] [type="radio"] + div,
+    .tabs [class*=" tab"] [type="radio"] + div {
+      display: block;
+      opacity: 0; /* прозрачность закрытой вкладки */
+      padding: 1rem 0;
+      width: 90%;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+  .tabs .tab-2 {
+    color: whitesmoke;
+    width: 45%;}
+    .tabs .tab-2 [type="radio"] + div {
+      width: 200%;
+      margin-left: 200%; }
+    .tabs .tab-2 [type="radio"]:checked + div {
+      margin-left: 0; }
+    .tabs .tab-2:last-child [type="radio"] + div {
+      margin-left: 100%; }
+    .tabs .tab-2:last-child [type="radio"]:checked + div {
+      margin-left: -100%; }
+
+.alpha {
+    color: red;
+    
+}
+
+.betta {
+    background-color: rgba(0, 0, 0, 0.6); /* фон вкладки */
+}
+
+.paragraph {
+    font-family: monospace;
+    font-size: 15px;
+}

@@ -1,0 +1,100 @@
+/* Comments */
+body {
+	background-image: url(img/5d68fe_ec22bb3f9c314dffb9b94c364b75951d.jpg); /* ссылка на фоновое изображение */
+    background-size: 1700px 675px; /* корректировка фонового изображения */
+}
+
+/* название */
+.text1 {
+    color: aliceblue;
+    position: absolute;
+    top: 0px;
+    left: 25px;
+    font-family: monospace;
+    font-size: 60px;
+}
+/* Описание вкладок */
+
+body {margin: 0;padding: 0;font-family: monospace;}
+
+ul {
+  position: absolute;
+  top: 250px;
+  left: 150px;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;    
+}
+ul li {
+  list-style: ;
+}
+ul li a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #727272; /* цвет вторичных ссылок - не активных */
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: none;
+  transition: 0.5s;
+  overflow: hidden;
+}
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #9d0303; /* цвет анимированного фона */
+  transition: .5s;
+}
+ul li a:hover {
+  color: #ffffff; /* цвет активной ссылки */
+}
+ul li a:hover::before {
+  animation: animate 0.25s linear forwards; /* скорость анимации */
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+/* подсветка активного пункта меню */
+
+.current a {
+    color: aliceblue;
+}
+
+#news {
+    object-position: left;
+    position: absolute;
+    background-color: red;
+    width: 500px;
+    height: 300px;
+    top: 25%;
+    left: 25%;
+}
